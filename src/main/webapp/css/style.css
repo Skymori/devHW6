@@ -1,0 +1,78 @@
+html {
+  font-family: sans-serif;
+}
+body { /* Сітка */
+  margin: 0;
+  background: radial-gradient(#BFD6E2 1px, rgba(255,255,255,0) 2px);
+  background-size: 10px 10px;
+}
+nav { /* Прив'язка граф' */
+  background: white;
+  text-align: center;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  outline: none;
+  transition: .4s ease-in-out;
+}
+.upper { /* Шапка */
+    font-family: 'Exo 2', sans-serif;
+    padding: 8px; /* Поля */
+    background: #efcbcb; /* Колір фона */
+    border: 3px solid #ffffff; /* Параметри рамки */
+}
+.topmenu { /* Фон шапки */
+  backface-visibility: hidden;
+  background: rgba(255,255,255,.8);
+}
+.topmenu > li { /* Горизонтальне меню */
+  display: inline-block; /* В лінію */
+  position: relative; /* Позиціонування списку з випадаючим меню */
+  width: 20%;
+}
+.topmenu > li > a {
+  font-family: 'Exo 2', sans-serif;
+  height: 70px;
+  line-height: 70px;
+  padding: 0 30px;
+  font-weight: bold;
+  color: #003559;/*колір тексту*/
+  text-transform: uppercase;
+}
+.topmenu > li:hover .submenu{ /* Випадаючий список */
+  visibility: visible; /* Показ підменю при наведенні */
+  opacity: 1;
+  transform: perspective(600px) rotateX(0deg);
+}
+.icon:after { /* Іконка вниз */
+  content: "\f103";
+  margin-left: 8px;
+  font-family: FontAwesome;
+}
+.topmenu li a:hover { color: #E6855F; } /* Колір при наведенні */
+.submenu {
+  background: white;
+  border: 2px solid #003559;
+  position: absolute; /* Позиціонування */
+  left: 10%;
+  visibility: hidden; /* Скрити підменю */
+  opacity: 0;
+  z-index: 5;
+  width: 80%;
+  transform: perspective(600px) rotateX(-90deg);
+  transform-origin: 0% 0%;
+  transition: .6s ease-in-out;
+}
+.submenu li a { /* Випадаючий список */
+  color: #7f7f7f;
+  font-size: 13px;
+  line-height: 36px;
+  padding: 0 25px;
+  font-family: 'Kurale', serif;
+}

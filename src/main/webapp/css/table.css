@@ -1,0 +1,36 @@
+.container {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  bottom: 20%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+table {
+  width: 800px;/*розміри комірок*/
+  border-collapse: collapse;
+  overflow: scroll;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #003559;
+  text-align: center;
+}
+th {
+  text-transform: uppercase;
+  text-align: center;
+}
+thead th {
+  background-color: #efcbcb;
+}
+tbody tr:hover {
+  background-color: rgba(191, 214, 226, 0.3);
+}
+tbody td {
+  position: relative;
+}
+
